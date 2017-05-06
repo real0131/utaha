@@ -2,24 +2,31 @@
 <html>
   <head>
     <title>Utaha.MOE</title>
-    <link rel='stylesheet' href='/css/MOE.css' />
+    <link rel='stylesheet' href='css/MOE.css' />
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <header>
       <nav>
-      
+
       </nav>
     </header>
     <main>
-      <div class="issue">
-        <div>
-
-        </div>
+      <div class="cover">
+          <div class="cover-background"></div>
+          <div id="btn-show-cover-content" class="indicator normal plus" onclick="onClick('show-cover-content');">
+            <svg height="100%" width="100%">
+              <line x1="50%" y1="0%" x2="50%" y2="100%" style="stroke:rgb(0,0,0); stroke-width: 1;"/>
+              <line x1="0%" y1="50%" x2="100%" y2="50%" style="stroke:rgb(0,0,0); stroke-width: 1;"/>
+            </svg>
+          </div>
+          <div class="cover-content"></div>
       </div>
     </main>
     <footer>
 
     </footer>
-    <script type="text/javascript" src="/js/MOE.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!--<script type="text/javascript" src="/js/MOE.js"></script>-->
   </body>
 </html>
