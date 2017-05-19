@@ -19,6 +19,7 @@ main{
 }
 
 .cover-content.hide-anim{
+    z-index: -1;
     animation-name: cover-content-hide;
     animation-duration: 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -34,6 +35,7 @@ main{
 }
 
 .cover-content.show-anim{
+    z-index: -1;
     animation-name: cover-content-show;
     animation-duration: 0.5s;
     -webkit-animation-fill-mode: forwards;
@@ -49,13 +51,27 @@ main{
 }
 
 @keyframes cover-content-hide {
-    0% {  transform: translateY(0px);  }
-    100% {  transform: translateY(300px);  }
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(250px);
+    }
 }
 
 @keyframes cover-content-show {
-    0% {  transform: translateY(300px);  }
-    100% {  transform: translateY(0px);  }
+    0% {
+        transform: translateY(250px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.carousel.cell{
+    width: 33%;
+    height: 100%;
+    border: 1px solid black;
 }
 
 #btn-show-cover-content{
@@ -92,7 +108,7 @@ main{
 }
 
 @keyframes indicator-rotate-Plus-X {
-    0% { transform: rotate(0deg); }
+    0% {  transform: rotate(0deg);  }
     100% { transform: rotate(45deg); }
 }
 
@@ -100,10 +116,46 @@ main{
     0% { transform: rotate(45deg); }
     100% { transform: rotate(0deg); }
 }
+@keyframes indicator-plus-cover-content-show {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    100% {
+        transform: translateY(250px) rotate(45deg);
+    }
+}
+
+@keyframes indicator-plus-cover-content-hide {
+    0% {
+        transform: translateY(250px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+.indicator.plus.cover-content-hide{
+    animation-name: indicator-plus-cover-content-hide;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.indicator.plus.cover-content-show{
+    animation-name: indicator-plus-cover-content-show;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
 
 .carousel{
+    box-sizing: border-box;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 }
 
 .carousel-button:hover{
@@ -117,8 +169,16 @@ main{
 .carousel-button.left{
     position: absolute;
     left: 0;
+    margin-left: 30px;
 }
 .carousel-button.right{
     position: absolute;
     right: 0;
+    margin-right: 30px;
+}
+
+article.character-article{
+    width: 100%;
+    height: 100%;
+    z-index: 30;
 }
