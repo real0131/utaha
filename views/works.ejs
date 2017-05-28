@@ -9,6 +9,17 @@
     <title>works.</title>
 </head>
 <body>
+<div class="dialog-container" id="dialog-container">
+    <div class="dialog white" id="dialog">
+        <div class="dialog-image"><img src="images/hina.png"></div>
+        <div class="dialog-info-wrapper">
+            <p class="dialog-title">KSATimer</p>
+            <p class="dialog-description">2017/05 HTML/CSS</p>
+            <div class="asdf">asdfasfasfasfdasdfasdfdasfdsjfhdsa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>jkhfawjkelneljkwnljflkasdjflksjflksajfldkfjlksdjf</div>
+        </div>
+    </div>
+    <div class="dialog-cancel" id="dialog-cancel"><img src="images/cancel.svg"></div>
+</div>
 <header class="header light-black">
     <div class="header-wrapper">
         <div class="header-title light-white-text">works.</div>
@@ -17,7 +28,7 @@
 <main>
     <section>
         <div class="container">
-            <div class="card white">
+            <div class="card white" onclick="showDialog(this);">
                 <div class="card-image"><img src="images/hina.png" /></div>
                 <div class="card-info-wrapper">
                     <div class="card-title">KSATimer</div>
@@ -25,7 +36,7 @@
                 </div>
                 <div class="card-category"><img src="images/html-coding.png" alt="html"/></div>
             </div>
-            <div class="card white">
+            <div class="card white" onclick="showDialog(this);">
                 <div class="card-image"><img src="images/yourname.png" /></div>
                 <div class="card-info-wrapper">
                     <div class="card-title">Kanji Study</div>
