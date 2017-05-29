@@ -25,6 +25,7 @@ var cancel_button = document.getElementById('dialog-cancel');
 
 function showDialog(element) {
     try{
+        //TODO: Need refactoring
         title = element.querySelector('.card-title').innerHTML;
         description = element.querySelector('.card-description').innerHTML;
         img = element.querySelector('.card-image > img').src;
@@ -46,6 +47,7 @@ function showDialog(element) {
 
 
 function removeDialog() {
+        dialog.scrollTop = 0;
         dialog.style.display = 'none';
         body.style.overflow = 'visible';
         cancel_button.removeEventListener('click',function () {});
