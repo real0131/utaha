@@ -34,7 +34,7 @@ function showDialog(element) {
         dialog.querySelector('.dialog-description').innerHTML = description;
         dialog.querySelector('.dialog-image > img').src = img;
         //TODO:xhr
-        dialog.style.display = 'flex';
+        dialog.style.display = 'block';
         body.style.overflow = 'hidden';
         dialog.style.overflow = 'scroll';
         cancel_button.addEventListener('click',function () {
@@ -50,7 +50,9 @@ function removeDialog() {
         dialog.scrollTop = 0;
         dialog.style.display = 'none';
         body.style.overflow = 'visible';
-        cancel_button.removeEventListener('click',function () {});
+        cancel_button.removeEventListener('click', function () {
+        });
+
 }
 
 /*event end*/
