@@ -22,6 +22,7 @@ function loadToPage(html) {
 var body = document.body;
 var dialog = document.getElementById('dialog-container');
 var cancel_button = document.getElementById('dialog-cancel');
+var header_btn_back = document.querySelector('.header-btn-back');
 
 function showDialog(element) {
     try{
@@ -29,7 +30,7 @@ function showDialog(element) {
         title = element.querySelector('.card-title').innerHTML;
         description = element.querySelector('.card-description').innerHTML;
         img = element.querySelector('.card-image > img').src;
-
+        addClass(header_btn_back,['show']);
         dialog.querySelector('.dialog-title').innerHTML = title;
         dialog.querySelector('.dialog-description').innerHTML = description;
         dialog.querySelector('.dialog-image > img').src = img;
@@ -50,9 +51,9 @@ function removeDialog() {
         dialog.scrollTop = 0;
         dialog.style.display = 'none';
         body.style.overflow = 'visible';
+        removeClass(header_btn_back,['show']);
         cancel_button.removeEventListener('click', function () {
         });
-
 }
 
 /*event end*/
@@ -65,5 +66,16 @@ function $(element) {
         console.error(err.message);
     }
     return result;
+}
+function addClass(element, classNames) {
+    for(i=0;i<classNames.length;i++) {
+        element.className += " " + classNames[i];
+    }
+}
+
+function removeClass(element, classNames) {
+    for(i=0;i<classNames.length;i++) {
+        element.classList.remove(classNames[i]);
+    }
 }
 /* function end */

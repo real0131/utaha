@@ -35,6 +35,17 @@ header{
     width: 100%;
 }
 
+.header-btn-back {
+    display: none;
+    width: 20px;
+    line-height: 100%;
+    margin-right: 10px;
+}
+
+.header-btn-back > img{
+    width: 100%;
+}
+
 .header-title{
     height: 42px;
     line-height: 42px;
@@ -135,7 +146,7 @@ section{
 }
 
 .card-category > img {
-    height: 32px;
+    height: 28px;
 }
 
 .dialog-container{
@@ -274,6 +285,7 @@ section{
         padding: 0;
     }
     .header{
+        z-index: 120;
         height: 44px;
     }
     .header-title{
@@ -282,15 +294,29 @@ section{
     .header-wrapper{
         padding: 0 16px;
     }
+    .dialog-container{
+        background-color: rgba(0,0,0,0);
+    }
+    .dialog{
+        width: 100%;
+        margin: 44px 0 0 0;
+        border-radius: 0;
+    }
+    .dialog-image{
+        border-radius: 0;
+    }
     .card{
-        width: 360px;
+        width: 100%;
         height: 280px;
-        margin: 10px auto;
+        margin: 10px 16px;
     }
     .card-image{
         height: 200px;
     }
     .card-category > img{
         height: 24px;
+    }
+    .header-btn-back.show{
+        display: block;
     }
 }
