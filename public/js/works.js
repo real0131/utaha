@@ -20,6 +20,7 @@ function loadToPage(html) {
 
 
 var body = document.body;
+var main = document.querySelector('main');
 var dialog = document.getElementById('dialog-container');
 var cancel_button = document.getElementById('dialog-cancel');
 var header_btn_back = document.querySelector('.header-btn-back');
@@ -27,9 +28,9 @@ var header_btn_back = document.querySelector('.header-btn-back');
 function showDialog(element) {
     try{
         //TODO: Need refactoring
-        title = element.querySelector('.card-title').innerHTML;
-        description = element.querySelector('.card-description').innerHTML;
-        img = element.querySelector('.card-image > img').src;
+        var title = element.querySelector('.card-title').innerHTML;
+        var description = element.querySelector('.card-description').innerHTML;
+        var img = element.querySelector('.card-image > img').src;
         addClass(header_btn_back,['show']);
         dialog.querySelector('.dialog-title').innerHTML = title;
         dialog.querySelector('.dialog-description').innerHTML = description;
@@ -37,7 +38,6 @@ function showDialog(element) {
         //TODO:xhr
         dialog.style.display = 'block';
         body.style.overflow = 'hidden';
-        dialog.style.overflow = 'scroll';
         cancel_button.addEventListener('click',function () {
             removeDialog(dialog);
         });
