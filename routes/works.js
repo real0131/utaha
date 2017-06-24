@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
-
+var model = require('../models/');
+var post = model.Post;
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('works',{});
+    var data = [];
+    post.findAll().then((results) => { res.render('works',{data : results}); });
 });
 
 router.get('/data/:id',function (req,res,next) {
