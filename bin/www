@@ -39,6 +39,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 models.sequelize.sync().then(function () {
+  debug('db connect finish');
     server.listen(port,function () {
         debug('server is working');
     });
