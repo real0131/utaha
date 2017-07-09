@@ -13,12 +13,14 @@
             height: 100%;
         }
         #login-form{
+            box-sizing: border-box;
             display: -webkit-flex;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
+            padding: 32px;
             margin: 0 auto;
         }
         button[type='submit']{
@@ -30,16 +32,23 @@
             border: none;
         }
         button[type='submit']:hover{
-            background-color: #055aa5;
+            background-color: #ffffff;
             cursor: pointer;
+        }
+        input{
+            box-sizing: border-box;
+            padding: 5px;
+            border: none;
+            font-size: 1.3em;
+            border-bottom: 1px solid rgba(0,0,0,0.5);
         }
     </style>
 </head>
 <body>
     <main>
         <form id="login-form" action="/admin/auth" method="post">
-            <label for="id">ID</label><input name="id" id="id" type="text">
-            <label for="pw">PW</label><input name="pw" id="pw" type="password">
+            <input name="id" id="id" type="text" placeholder="ID">
+            <input name="pw" id="pw" type="password" placeholder="Password">
             <button type="submit">login</button>
         </form>
     </main>
