@@ -16,7 +16,7 @@
         <div class="dialog-info-wrapper">
             <p class="dialog-title">KSATimer</p>
             <p class="dialog-description">2017/05 HTML/CSS</p>
-            <div class="asdf">asdfasfasfasfdasdfasdfdasfdsjfhdsa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>jkhfawjkelneljkwnljflkasdjflksjflksajfldkfjlksdjf</div>
+            <div class="dialog-content">asdfasfasfasfdasdfasdfdasfdsjfhdsa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>jkhfawjkelneljkwnljflkasdjflksjflksajfldkfjlksdjf</div>
         </div>
     </div>
     <div class="dialog-cancel" id="dialog-cancel"><img src="images/cancel.svg"></div>
@@ -38,6 +38,7 @@
                         <div class="card-description"><%= data[i].description %></div>
                     </div>
                     <div class="card-category"><img src="images/<%= data[i].category %>.png" alt="html"/></div>
+                    <div class="card-id" style="display: none"><%= data[i].id %></div>
                 </div>
             <% } %>
         </div>

@@ -29,18 +29,26 @@
             color: white;
             font-size: 1.2em;
             border-radius: 5px;
-            border: none;
+            border: 1px solid #fff;
+            transition-duration: 0.3s;
         }
         button[type='submit']:hover{
             background-color: #ffffff;
+            color: #025aa5;
+            border: 1px solid #025aa5;
+            transition-duration: 0.3s;
             cursor: pointer;
         }
         input{
             box-sizing: border-box;
             padding: 5px;
+            margin: 10px;
             border: none;
             font-size: 1.3em;
             border-bottom: 1px solid rgba(0,0,0,0.5);
+        }
+        #btn_submit {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -49,7 +57,7 @@
         <form id="login-form" action="/admin/auth" method="post">
             <input name="id" id="id" type="text" placeholder="ID">
             <input name="pw" id="pw" type="password" placeholder="Password">
-            <button type="submit">login</button>
+            <button type="submit" id="btn_submit">login</button>
         </form>
     </main>
 </body>

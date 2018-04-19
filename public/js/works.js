@@ -1,6 +1,6 @@
 /*AJAX start*/
 //var xhr = XMLHttpRequest();
-var id =1;
+var url = "/works/content/";
 /*
 xhr.onload = function () {
     if(xhr.status == 200){
@@ -13,6 +13,19 @@ xhr.open('GET','/works/'+id,true);
 function loadToPage(html) {
     console.log(html);
 }*/
+
+function AJAX(req,element) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET",url + req,true);
+    xhttp.onload = function (ev) {
+        element.innerHTML = this.responseText;
+    };
+    xhttp.send();
+}
+
+function getContent(id,element) {
+    AJAX(id,element);
+}
 
 /*AJAX end*/
 
@@ -36,6 +49,7 @@ function showDialog(element) {
         dialog.querySelector('.dialog-description').innerHTML = description;
         dialog.querySelector('.dialog-image > img').src = img;
         //TODO:xhr
+        getContent(Number(element.querySelector('.card-id').innerHTML),dialog.querySelector('.dialog-content'));
         dialog.style.display = 'block';
         body.style.overflow = 'hidden';
         cancel_button.addEventListener('click',function () {
