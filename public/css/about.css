@@ -1,11 +1,4 @@
-body,html{
-    width: 100vw;
-    height: 100vh;
-}
 body{
-    padding: 0;
-    font-family: 'Noto Sans CJK KR', '나눔고딕', sans-serif;
-    margin: 0;
     background-color: #212121;
 }
 nav {

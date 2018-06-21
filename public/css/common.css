@@ -1,0 +1,15 @@
+html, body{
+    height: 100vh;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans CJK KR', '나눔고딕', sans-serif;
+}
+
+::selection {
+    background-color: #E0E0E0;
+    color: black;
+}
+

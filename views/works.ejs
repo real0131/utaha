@@ -3,27 +3,26 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="user-scalable=no, width=device-width" />
-
-    <link rel="stylesheet" href="css/works.css" />
-
+    <link rel="stylesheet" href="https://utaha.moe/css/works.css" />
+    <link rel="stylesheet" href="https://utaha.moe/css/common.css" />
     <title>works.</title>
 </head>
 <body>
 <div class="dialog-container" id="dialog-container">
     <div class="dialog-background" onclick="removeDialog()"></div>
     <div class="dialog white" id="dialog">
-        <div class="dialog-image"><img src="images/hina.png"></div>
+        <div class="dialog-image"><img src=""></div>
         <div class="dialog-info-wrapper">
-            <p class="dialog-title">KSATimer</p>
-            <p class="dialog-description">2017/05 HTML/CSS</p>
-            <div class="dialog-content">asdfasfasfasfdasdfasdfdasfdsjfhdsa<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>jkhfawjkelneljkwnljflkasdjflksjflksajfldkfjlksdjf</div>
+            <p class="dialog-title"></p>
+            <p class="dialog-description"></p>
+            <div class="dialog-content"></div>
         </div>
     </div>
-    <div class="dialog-cancel" id="dialog-cancel"><img src="images/cancel.svg"></div>
+    <div class="dialog-cancel" id="dialog-cancel"><img src="https://utaha.moe/images/cancel.svg"></div>
 </div>
 <header class="header light-black">
     <div class="header-wrapper">
-        <div class="header-btn-back" onclick="removeDialog();"><img src="images/left-arrow.svg"></div>
+        <div class="header-btn-back" onclick="removeDialog();"><img src="https://utaha.moe/images/left-arrow.svg"></div>
         <div class="header-title light-white-text">works.</div>
     </div>
 </header>
@@ -32,18 +31,18 @@
         <div class="container">
             <% for(var i=0;i < data.length; i++) { %>
                 <div class="card white" onclick="showDialog(this);">
-                    <div class="card-image"><img src="<%= data[i].mainImage %>" /></div>
+                    <div class="card-image"><img src="https://utaha.moe/<%= data[i].mainImage %>" /></div>
                     <div class="card-info-wrapper">
                         <div class="card-title"><%= data[i].title %></div>
                         <div class="card-description"><%= data[i].description %></div>
                     </div>
-                    <div class="card-category"><img src="images/<%= data[i].category %>.png" alt="html"/></div>
+                    <div class="card-category"><img src="https://utaha.moe/images/<%= data[i].category %>.png" alt="html"/></div>
                     <div class="card-id" style="display: none"><%= data[i].id %></div>
                 </div>
             <% } %>
         </div>
     </section>
 </main>
-<script src="js/works.js"></script>
+<script src="https://utaha.moe/js/works.js"></script>
 </body>
 </html>

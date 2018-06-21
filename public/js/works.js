@@ -14,17 +14,14 @@ function loadToPage(html) {
     console.log(html);
 }*/
 
-function AJAX(req,element) {
+function AJAX(req,element,callback) {
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET",url + req,true);
     xhttp.onload = function (ev) {
         element.innerHTML = this.responseText;
+        callback();
     };
     xhttp.send();
-}
-
-function getContent(id,element) {
-    AJAX(id,element);
 }
 
 /*AJAX end*/
@@ -49,11 +46,12 @@ function showDialog(element) {
         dialog.querySelector('.dialog-description').innerHTML = description;
         dialog.querySelector('.dialog-image > img').src = img;
         //TODO:xhr
-        getContent(Number(element.querySelector('.card-id').innerHTML),dialog.querySelector('.dialog-content'));
-        dialog.style.display = 'block';
-        body.style.overflow = 'hidden';
-        cancel_button.addEventListener('click',function () {
-            removeDialog(dialog);
+        AJAX(Number(element.querySelector('.card-id').innerHTML),dialog.querySelector('.dialog-content'),function () {
+            dialog.style.display = 'block';
+            body.style.overflow = 'hidden';
+            cancel_button.addEventListener('click',function () {
+                removeDialog(dialog);
+            });
         });
     }catch(err) {
         console.error(err.message);

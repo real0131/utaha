@@ -16,11 +16,8 @@ router.get('/data/:id',function (req,res,next) {
 });
 
 router.get('/content/:id',function(req,res){
-    console.log('flag 1');
-        console.log('flag 2');
         post.findOne({where: {id: req.params.id}})
             .then((results) => {
-                console.log(results.content);
                 res.end(results.content);
             });
 });
