@@ -4,6 +4,7 @@ var model = require('../models/');
 var post = model.Post;
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    console.log(new Date(Date.now()).toString() + " : works");
     var data = [];
     post.findAll().then((results) => { res.render('works',{data : results}); });
 });

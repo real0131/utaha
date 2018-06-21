@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/auth', function (req,res,next) {
     console.log(req.body);
+    console.log(new Date(Date.now()).toString() + " : admin");
     res.end('hello');
 
     if(id == "admin_account" && password == "helloworld"){
