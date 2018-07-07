@@ -60,12 +60,16 @@ function showDialog(element) {
 
 
 function removeDialog() {
-        dialog.scrollTop = 0;
-        dialog.style.display = 'none';
-        body.style.overflow = 'visible';
-        removeClass(header_btn_back,['show']);
-        cancel_button.removeEventListener('click', function () {
-        });
+        dialog.querySelector('.dialog').classList.add('dialog-end-anim');
+        setTimeout(function() {
+            dialog.scrollTop = 0;
+            dialog.style.display = 'none';
+            body.style.overflow = 'visible';
+            dialog.querySelector('.dialog').classList.remove('dialog-end-anim');
+            removeClass(header_btn_back,['show']);
+            cancel_button.removeEventListener('click', function () {
+            });
+        }, 300);
 }
 
 /*event end*/
